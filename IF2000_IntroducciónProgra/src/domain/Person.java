@@ -70,6 +70,4 @@ public class Person {
                 + "\n, age=" + getAge() ;
     }
     
-    
-    
 }

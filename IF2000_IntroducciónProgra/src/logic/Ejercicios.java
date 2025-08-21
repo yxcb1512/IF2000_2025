@@ -9,5 +9,8 @@ package logic;
  * @author yeire
  */
 public class Ejercicios {
+  
+    
+    
     
 }
