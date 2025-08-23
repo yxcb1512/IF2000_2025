@@ -4,7 +4,7 @@
  */
 package if2000_introducciónprogra;
 import logic.*;
-
+import java.util.Scanner;
 /**
  *
  * @author yeire
@@ -49,12 +49,24 @@ data structures:
 
    
 
-    Ejercicios_Semana2_PracticaEnClase ej;
-    ej = new Ejercicios_Semana2_PracticaEnClase();
-       // ej.quiz2_B_piramide(5);
-    
-        ej.ejercicioA(4);
+        Ejercicios_Semana2_PracticaEnClase ej;
+        ej = new Ejercicios_Semana2_PracticaEnClase();
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
         
+        
+        System.out.println("Ingrese 10 números enteros:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = sc.nextInt();
+        }
+        
+        ej.quiz2_B_piramide(5);
+        ej.ejercicioA(5); 
+        ej.ejercicioB(5);
+        ej.ejercicioC(5);
+        ej.ejercicioD(numeros);
+       sc.close();
+       
     }
 }
     
