@@ -55,7 +55,8 @@ data structures:
         int[] numeros = new int[10];
         
         
-        System.out.println("Ingrese 10 números enteros:");
+        
+        System.out.println("Ingrese 10 numeros enteros:");
         for (int i = 0; i < 10; i++) {
             numeros[i] = sc.nextInt();
         }
@@ -66,7 +67,11 @@ data structures:
         ej.ejercicioC(5);
         ej.ejercicioD(numeros);
        sc.close();
+        int[] arreglo = Ejercicios_Semana2_PracticaEnClase.ejercicioE();
+        System.out.println("Los cien numeros aleatorios ordenados decrecientemente son: ");
+        for (int num : arreglo){
+            System.out.print(num + ", ");
+        }
        
     }
 }
-    

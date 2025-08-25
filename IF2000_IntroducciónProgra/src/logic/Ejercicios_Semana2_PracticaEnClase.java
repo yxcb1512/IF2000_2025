@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package logic;
-
+import java.util.Arrays;
+import java.util.Random;
 /**
  *
  * @author yeire
@@ -43,7 +44,7 @@ public class Ejercicios_Semana2_PracticaEnClase {
             *             *
             *             *
             * * * * * *
-   */      //CORREGIR PARA QUE EL CENTRO QUEDE VACIO
+   */      
     
     public void ejercicioA(int n){
         
@@ -111,6 +112,7 @@ impresión del arreglo para mostrar el resultado.
 */
     
    public void ejercicioD(int [] numeros){
+       System.out.println();
        
        for (int i = 0; i < numeros.length-1; i++) {
             for (int j = i+1; j < numeros.length; j++) {
@@ -130,6 +132,28 @@ impresión del arreglo para mostrar el resultado.
        }
        
    }
-}
+
+
+    public static int[]ejercicioE() {
+       System.out.println();
+       System.out.println();
+        
+        int[] numeros = new int [100];
+        Random rand = new Random();
+        
+        for (int i = 0; i < numeros.length; i++) {
+             numeros[i] = rand.nextInt(10000);
+        }
+        
+        Arrays.sort(numeros);
+        
+        
+        int[] descendente = new int [numeros.length];
+        for (int i = 0; i < numeros.length; i++) {
+             descendente[i] = numeros[numeros.length -1 -i];
+        }
+            return descendente;
+        }
+    }
 
     
