@@ -156,6 +156,7 @@ impresión del arreglo para mostrar el resultado.
         }
     
 
+    //falta terminarla
     public static int ejercicioF(int n ){
         
         for (int i = 1; i <= 9; i++) {
