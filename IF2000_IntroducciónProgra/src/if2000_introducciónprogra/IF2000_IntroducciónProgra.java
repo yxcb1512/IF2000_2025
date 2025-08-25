@@ -68,7 +68,7 @@ data structures:
         ej.ejercicioD(numeros);
        sc.close();
         int[] arreglo = Ejercicios_Semana2_PracticaEnClase.ejercicioE();
-        System.out.println("Los cien numeros aleatorios ordenados decrecientemente son: ");
+        System.out.println("Los cien 1numeros aleatorios ordenados decrecientemente son: ");
         for (int num : arreglo){
             System.out.print(num + ", ");
         }

@@ -154,6 +154,18 @@ impresión del arreglo para mostrar el resultado.
         }
             return descendente;
         }
+    
+
+    public static int ejercicioF(int n ){
+        
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 1; j <= 9; j++) {
+                for (int k = 0; k < 10; k++) {
+                    
+                }
+            }
+        }
+        
     }
 
     
