@@ -152,21 +152,38 @@ impresión del arreglo para mostrar el resultado.
         for (int i = 0; i < numeros.length; i++) {
              descendente[i] = numeros[numeros.length -1 -i];
         }
+        System.out.println();
             return descendente;
         }
     
 
     //falta terminarla
-    public static int ejercicioF(int n ){
-        
-        for (int i = 1; i <= 9; i++) {
-            for (int j = 1; j <= 9; j++) {
-                for (int k = 0; k < 10; k++) {
-                    
+    public String[][]  ejercicioF(){
+        System.out.println();
+        System.out.println();
+        String[][] tablero = new String[8][8];
+
+        for (int fila = 0; fila < 8; fila++) {
+            for (int col = 0; col < 8; col++) {
+                if ((fila + col) % 2 == 1) { 
+                    if (fila < 3) {
+                        tablero[fila][col] = "N";
+                    } else if (fila > 4) {
+                        tablero[fila][col] = "R"; 
+                    } else {
+                        tablero[fila][col] = " ";
+                    }
+                } else {
+                    tablero[fila][col] = " "; 
                 }
             }
         }
+        System.out.println();
+        return tablero;
+    }
+        
         
     }
+
 
     

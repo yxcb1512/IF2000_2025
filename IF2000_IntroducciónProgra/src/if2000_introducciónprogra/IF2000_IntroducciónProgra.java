@@ -68,10 +68,27 @@ data structures:
         ej.ejercicioD(numeros);
        sc.close();
         int[] arreglo = Ejercicios_Semana2_PracticaEnClase.ejercicioE();
-        System.out.println("Los cien 1numeros aleatorios ordenados decrecientemente son: ");
+        System.out.println("Los cien numeros aleatorios ordenados decrecientemente son: ");
         for (int num : arreglo){
             System.out.print(num + ", ");
         }
        
+        String[][] tablero = ej.ejercicioF();
+
+        System.out.print("  ");
+        for (int col = 1; col <= 8; col++) {
+            System.out.print(col + " ");
+        }
+        System.out.println();
+
+        char letraFila = 'A';
+        for (int fila = 0; fila < tablero.length; fila++) {
+            System.out.print(letraFila + " ");
+            for (int col = 0; col < tablero[fila].length; col++) {
+                System.out.print(tablero[fila][col] + " ");
+            }
+            System.out.println();
+            letraFila++;
+        }
     }
 }
