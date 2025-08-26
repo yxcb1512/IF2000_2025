@@ -49,7 +49,7 @@ data structures:
 
    
 
-        Ejercicios_Semana2_PracticaEnClase ej;
+  /*      Ejercicios_Semana2_PracticaEnClase ej;
         ej = new Ejercicios_Semana2_PracticaEnClase();
         Scanner sc = new Scanner(System.in);
         int[] numeros = new int[10];
@@ -89,6 +89,9 @@ data structures:
             }
             System.out.println();
             letraFila++;
-        }
+        }*/
+        Quiz3 q =new Quiz3();
+        
+        q.cuadrado(9);
     }
 }
