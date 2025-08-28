@@ -89,9 +89,14 @@ data structures:
             }
             System.out.println();
             letraFila++;
-        }*/
+        }
         Quiz3 q =new Quiz3();
         
-        q.cuadrado(9);
+        q.cuadrado(9);  */
+  
+        LabUno lab = new LabUno();
+        
+        lab.ejercicioA(7);
+        lab.ejercicioB(9);
     }
 }
