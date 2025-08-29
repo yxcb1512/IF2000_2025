@@ -92,4 +92,31 @@ public class LabUno {
         
     }
     
+    
+    public void ejercicioH(){
+        /*Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se le asigna
+        como un porcentaje de su salario mensual que depende de su antigüedad en la empresa de
+        acuerdo con la siguiente tabla:
+                Tiempo:                                             Utilidad:
+                Menos de 1 año                                      5% del salario
+                1 año o más y menos de 2 años                7% del salario
+                2 años o más y menos de 5 años               10% del salario
+                5 años o más y menos de 10 años             15% del salario
+                10 años o más                                           20% del salario      */
+        
+    }
+    
+    public void ejercicioI(int n){
+        // Diseñar un algoritmo para determinar si un número N es primo (un número es primo si
+        // únicamente es divisible por el mismo y por la unidad)
+        
+        if (n%n==0 && n%1==0){
+            System.out.print("El numero "+ n +" es un numero primo");
+        }else{
+            System.out.print("El numero "+n+" no es un numero primo");
+        }
+        
+    }
+    
+    
 }
