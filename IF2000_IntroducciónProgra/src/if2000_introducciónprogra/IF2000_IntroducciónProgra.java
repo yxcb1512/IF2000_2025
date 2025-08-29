@@ -101,7 +101,12 @@ data structures:
         lab.ejercicioC();
         lab.ejercicioD(7, 8, 5);
         lab.ejercicioE(4, 5);
+        lab.ejercicioF();
+        lab.ejercicioG();
+        lab.ejercicioH();
         lab.ejercicioI(7);
-        
+        lab.ejercicioJ();
+        lab.ejercicioK(); 
+        lab.ejercicioL(4, 5);
     }
 }

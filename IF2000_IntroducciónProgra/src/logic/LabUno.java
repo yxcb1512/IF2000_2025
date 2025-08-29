@@ -4,6 +4,8 @@
  */
 package logic;
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 /**
  *
@@ -73,24 +75,69 @@ public class LabUno {
         
     }
     
-    public void ejercicioF(int cero, int uno, int dos, int tres, int cuatro, int cinco, int seis, int siete, int ocho, int nueve, int diez){
-        //Programa que lee un número de notas con valores de 0 a 10, termina cuando se le introduce
-        //una nota con el valor -1 y nos dice si hubo o no alguna con el valor 10.
-        
-        
-        //HACERLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        
-        
+    public void ejercicioF(){
+            //Programa que lee un número de notas con valores de 0 a 10, termina cuando se le introduce
+            //una nota con el valor -1 y nos dice si hubo o no alguna con el valor 10.
+       
+            Scanner sc = new Scanner(System.in);
+        boolean huboDiez = false;
+        int nota;
+
+        System.out.println("Introduce notas (0 a 10). Escribe -1 para terminar:");
+
+        while (true) {
+            nota = sc.nextInt();
+
+            if (nota == -1) {
+                break;
+            }
+
+            if (nota == 10) {
+                huboDiez = true; 
+            }
+        }
+
+        if (huboDiez) {
+            System.out.println("Si hubo al menos una nota con valor 10.");
+        } else {
+            System.out.println("No hubo ninguna nota con valor 10.");
+        }
+
+        sc.close();
     }
-    
+
+        
     public void ejercicioG(){
         //Calcular el número de pulsaciones que debe tener una persona por cada 10 segundos de
         //ejercicio aeróbico, la formula se aplica de acuerdo al sexo es:
         //a. Femenino: numero_pulsaciones = (220 - edad)/10
         //b. Masculino: numero_pulsaciones = (210 - edad)/10
         
-        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese su edad: ");
+        int edad = sc.nextInt();
+
+        System.out.print("Ingrese su sexo (M para masculino, F para femenino): ");
+        char sexo = sc.next().toUpperCase().charAt(0);
+
+        int pulsaciones;
+
+        if (sexo == 'F') {
+            pulsaciones = (220 - edad) / 10;
+        } else if (sexo == 'M') {
+            pulsaciones = (210 - edad) / 10;
+        } else {
+            System.out.println("Sexo no valido, use M o F.");
+            return;
+        }
+
+        System.out.println("El numero de pulsaciones por cada 10 segundos es: " + pulsaciones);
+
+        sc.close();
     }
+        
+    
     
     
     public void ejercicioH(){
@@ -104,7 +151,33 @@ public class LabUno {
                 5 años o más y menos de 10 años             15% del salario
                 10 años o más                                           20% del salario      */
         
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese su salario mensual: ");
+        double salario = sc.nextDouble();
+
+        System.out.print("Ingrese sus anios de antiguedad en la empresa: ");
+        int anios = sc.nextInt();
+
+        double utilidad;
+
+        if (anios < 1) {
+            utilidad = salario * 0.05;
+        } else if (anios < 2) {
+            utilidad = salario * 0.07;
+        } else if (anios < 5) {
+            utilidad = salario * 0.10;
+        } else if (anios < 10) {
+            utilidad = salario * 0.15;
+        } else {
+            utilidad = salario * 0.20;
+        }
+
+        System.out.println("La utilidad que recibira es: " + utilidad);
+
+        sc.close();
     }
+    
     
     public void ejercicioI(int n){
         // Diseñar un algoritmo para determinar si un número N es primo (un número es primo si
@@ -118,5 +191,79 @@ public class LabUno {
         
     }
     
-    //HOLA CHAR COMO ESTAS?
+    public void ejercicioJ(){
+        /* En una fábrica de computadoras se planea ofrecer a los clientes un descuento que dependerá
+del número de computadoras que compre. Si las computadoras son menos de cinco se les dará
+un 10% de descuento sobre el total de la compra; si el número de computadoras es mayor o
+igual a cinco, pero menos de diez se le otorga un 20% de descuento; y si son 10 o más se les da
+un 40% de descuento. El precio de cada computador es de 11.000$. Elabore el DF que permite
+imprimir la cantidad de computadoras compradas, el precio total sin el descuento, el monto que
+le descontaron, así como el monto total a pagar.*/
+        
+        System.out.println();
+         Scanner sc = new Scanner(System.in);
+        final double PRECIO = 11000;
+
+        System.out.print("Ingrese la cantidad de computadoras a comprar: ");
+        int cantidad = sc.nextInt();
+
+        double totalSinDescuento = cantidad * PRECIO;
+        double descuento;
+
+        if (cantidad < 5) {
+            descuento = totalSinDescuento * 0.10;
+        } else if (cantidad < 10) {
+            descuento = totalSinDescuento * 0.20;
+        } else {
+            descuento = totalSinDescuento * 0.40;
+        }
+
+        double totalPagar = totalSinDescuento - descuento;
+
+        System.out.println("Cantidad de computadoras: " + cantidad);
+        System.out.println("Precio total sin descuento: $" + totalSinDescuento);
+        System.out.println("Monto descontado: $" + descuento);
+        System.out.println("Total a pagar: $" + totalPagar);
+
+        sc.close();
+    }
+    
+    public void ejercicioK(){
+        // Diseñe un DF que genere la lista de los números primos, que existen entre el número 2 y un
+//numero natural N leído del teclado.
+
+        System.out.println();
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese un numero N: ");
+        int N = sc.nextInt();
+
+        System.out.println("Numeros primos entre 2 y " + N + ":");
+
+        for (int i = 2; i <= N; i++) {
+            boolean esPrimo = true;
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    esPrimo = false;
+                    break;
+                }
+            }
+            if (esPrimo) {
+                System.out.print(i + " ");
+            }
+        }
+
+        sc.close();
+
+    }
+    
+    public void ejercicioL(int base, int altura){
+        //Escribir un algoritmo que calcule el área de un triángulo en función de base y altura.
+        
+        int area= base*altura;
+        System.out.println("El area del triangulo es: "+area);
+        
+    }
+    
 }
