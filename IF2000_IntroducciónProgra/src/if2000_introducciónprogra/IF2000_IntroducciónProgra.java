@@ -98,5 +98,8 @@ data structures:
         
         lab.ejercicioA(7);
         lab.ejercicioB(9);
+        lab.ejercicioC();
+        lab.ejercicioD(7, 8, 5);
+        lab.ejercicioE(5, 5);
     }
 }
