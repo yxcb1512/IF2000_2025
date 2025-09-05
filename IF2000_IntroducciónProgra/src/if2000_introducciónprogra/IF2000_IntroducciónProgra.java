@@ -94,7 +94,7 @@ data structures:
         
         q.cuadrado(9);  */
   
-        LabUno lab = new LabUno();
+      /*  LabUno lab = new LabUno();
         
         lab.ejercicioA(7);
         lab.ejercicioB(9);
@@ -107,6 +107,16 @@ data structures:
         lab.ejercicioI(7);
         lab.ejercicioJ();
         lab.ejercicioK(); 
-        lab.ejercicioL(4, 5);
+        lab.ejercicioL(4, 5);*/
+      
+      
+      LabDos ld = new LabDos();
+      
+      ld.ejercicio1();
+     // ld.ejercicio2();
+     // ld.ejercicio3();
+     // ld.ejercicio4();
+     // ld.ejercicio5();
+     ld.ejercicio6();
     }
 }
