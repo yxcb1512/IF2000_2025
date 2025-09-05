@@ -113,10 +113,19 @@ data structures:
       LabDos ld = new LabDos();
       
       ld.ejercicio1();
-     // ld.ejercicio2();
-     // ld.ejercicio3();
-     // ld.ejercicio4();
-     // ld.ejercicio5();
-     ld.ejercicio6();
+     /*ld.ejercicio2();
+        ld.ejercicio3();
+        ld.ejercicio4();
+        ld.ejercicio5();
+        ld.ejercicio6();
+        ld.ejercicio7();
+        ld.ejercicio8();
+        ld.ejercicio9();
+        ld.ejercicio10();
+        ld.ejercicio11();
+        ld.ejercicio12();*/
+        ld.ejercicio13();
+      //ld.ejercicio14();
+        ld.ejercicio15();
     }
 }

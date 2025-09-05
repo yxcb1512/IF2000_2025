@@ -161,4 +161,215 @@ public class LabDos {
         
         sc.close();
     }
+    
+    public void ejercicio7(){
+        /*Realizar un algoritmo que permita intercambiar entre si los valores de dos variables A y B.
+            Ejemplo: Si A vale 5 y B vale 10, al resolver el problema A debe valer 10 y B valer 5.*/
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("ingrese los valores que quiere intercambiar");
+        int a= sc.nextInt();
+        int b= sc.nextInt();
+        
+        System.out.println("Antes del intercambio, el valor del primer numero es: "+a+" y el del segundo es: "+b);
+        
+        int apoyo=a;
+        a=b;
+        b=apoyo;
+        
+        System.out.println("Despues del intercambio, el valor del primer numero es: "+a+" y el del segundo es: "+b);
+        sc.close();
+    }
+    
+    public void ejercicio8(){
+        /*Elabore un diagrama de flujo que permita encontrar la ecuación de la recta
+                    y=mx+b donde M= (Y₀-Y₁)/(X₀-X₁) b=y-mx*/
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Ingrese los valores de los pares ordenados: ");
+        System.out.print("x1: ");
+        double x1=sc.nextDouble();
+        System.out.print("x2: ");
+        double x2=sc.nextDouble();
+        System.out.print("y1: ");
+        double y1=sc.nextDouble();
+        System.out.print("y2: ");
+        double y2=sc.nextDouble();
+        
+        double m= (y1-y2)/(x1-x2);
+        double b= y1 - (m*x1);
+        
+        System.out.println("La ecuacion de la recta es: y = " + m + "x + " + b);
+        
+        sc.close();
+    }
+    
+    
+    public void ejercicio9(){
+        /*. Realizar un algoritmo que lea un numero natural K e imprima la suma de todos los
+                            números naturales que sean menores a él. */
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingrese el valor del numero: ");
+        int n = sc.nextInt();
+        int suma=0;
+        
+        for (int i = 0; i <= n; i++) {
+            
+            suma +=i;
+        }
+        System.out.println("El resultado de la suma de todos los numeros naturales antecesores al "+n+" es: "+suma);
+    }
+    
+    
+    public void ejercicio10(){
+        /*Calcular la media (promedio) de una serie de números positivos. El promedio es la
+            suma total de los números leídos entre la cantidad de números. */
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("¿Cuantos numeros positivos desea ingresar? ");
+        int cantidad = sc.nextInt();
+
+        double suma = 0;
+
+        for (int i = 1; i <= cantidad; i++) {
+            System.out.print("Ingrese el numero " + i + ": ");
+            double num = sc.nextDouble();
+
+            
+            if (num < 0) {
+                System.out.println("Debe ser un numero positivo. Intente de nuevo.");
+                i--; 
+            } else {
+                suma += num;
+            }
+        }
+
+        double promedio = suma / cantidad;
+
+        System.out.println("La suma total es: " + suma);
+        System.out.println("El promedio es: " + promedio);
+
+        sc.close();
+    }
+    
+    
+    public void ejercicio11(){
+        /*Dados 10 números enteros, visualizar la suma de los números pares de la lista.
+            ¿Cuántos números pares e impares existen?, ¿Cuál es la suma total de los números y
+                cuanto es la suma de los impares y los pares por separado?*/
+        Scanner sc =new Scanner(System.in);
+        
+        int sumaPares = 0;
+        int sumaImpares = 0;
+        int contadorPares = 0;
+        int contadorImpares = 0;
+        int sumaTotal = 0;
+
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Ingrese el numero " + i + ": ");
+            int num = sc.nextInt();
+
+            sumaTotal += num;
+
+            if (num % 2 == 0) {
+                sumaPares += num;
+                contadorPares++;
+            } else { 
+                sumaImpares += num;
+                contadorImpares++;
+            }
+        }
+        System.out.println("\nResultados:");
+        System.out.println("Cantidad de pares: " + contadorPares);
+        System.out.println("Cantidad de impares: " + contadorImpares);
+        System.out.println("Suma de pares: " + sumaPares);
+        System.out.println("Suma de impares: " + sumaImpares);
+        System.out.println("Suma total: " + sumaTotal);
+
+        sc.close();
+    }
+    
+    
+    public void ejercicio12(){
+        /*Se desea calcular independientemente la suma de los números pares e impares
+            comprendidos entre 1 y 200. */
+        
+        int pares=0;
+        int impares=0;
+        
+        for (int i = 1; i <= 200; i++) {
+            if(i%2==0){
+                pares+=i;
+            }else{
+                impares+=i;
+            }
+        }
+        
+        System.out.println("La suma de los pares es: "+pares+" y el de los impares es: "+impares);
+    }
+    
+    
+    public void ejercicio13(){
+        /* Calcular la suma de los cuadrados de los 100 primeros números naturales. */
+        
+        int suma = 0;
+        double multiplicacion=0;
+        
+        for (int i = 1; i <= 100; i++) {
+            multiplicacion=Math.pow(i, 2);
+            suma+=multiplicacion;
+        }
+        System.out.println("El resultado de la suma de los cuadrados de los primeros 100 numeros naturales es: "+suma);
+    }
+    
+    
+    public void ejercicio14(){
+        /*Desarrollar el algoritmo necesario para calcular el factorial de un numero entero
+           positivo N que responde a la formula;
+           N! = 1 * 2 * 3 * 4 *…………………….. (n-1) * n
+           Si n es 0 entonces 0!= 1
+           Si n es 1 entonces 1!= 1 */
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un numero entero positivo: ");
+        int n = sc.nextInt();
+        
+        if (n < 0) {
+            System.out.println("El factorial no esta definido para numeros negativos.");
+        } else {
+            long factorial = 1; 
+            
+            for (int i = 1; i <= n; i++) {
+                factorial *= i; 
+            }
+            
+            System.out.println(n + "! = " + factorial);
+        }
+        
+        sc.close();
+    }
+    
+    
+    public void ejercicio15(){
+        /* Calcular el valor máximo de una serie de 10 números. */
+        
+        Scanner sc = new Scanner(System.in);
+        int maximo = Integer.MIN_VALUE; 
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Ingrese el numero " + i + ": ");
+            int numero = sc.nextInt();
+            
+            if (numero > maximo) {
+                maximo = numero; 
+            }
+        }
+        
+        System.out.println("El valor maximo de la serie es: " + maximo);
+        sc.close();
+    }
 }
